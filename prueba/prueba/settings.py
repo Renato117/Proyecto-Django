@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'inicio',
     'registros.apps.RegistrosConfig',
+    'ckeditor',
 ]
 
 MIDDLEWARE = [
@@ -84,7 +85,7 @@ DATABASES = {
     }
 }
 
-<<<<<<< HEAD
+
 '''DATABASES = {
     'default': {
     'ENGINE': 'django.db.backends.mysql',
@@ -92,12 +93,10 @@ DATABASES = {
     'USER': 'root',
     'PASSWORD': '',
     'HOST': 'localhost',
-    'PORT':'3306',
-        }
-    }'''
+    'PORT': '3306',
+    }
+}'''
 
-=======
->>>>>>> 70f741bcabd82be37e8a73db01994424bbbe7341
 
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
@@ -135,6 +134,10 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
+STATICFILES_DIRS = [
+    BASE_DIR / "static",
+]
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
@@ -142,3 +145,29 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, "media")
+
+CKEDITOR_CONFIGS = {
+    'default': {'toolbar': 'Custom',
+    'toolbar_Custom': [
+            ['Bold', 'Italic', 'Underline'],
+            ['NumberedList', 'BulletedList', '-' 'Outdent', 'Indent', '-', 'JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock'],
+            ['Link', 'Unlink'],
+            ['RemoveFormat', 'Source']
+        ]
+    }
+<<<<<<< HEAD
+}
+
+'''DATABASES = {
+    'default':{
+    'ENGINE': 'django.dbbackends.myysql',
+    'NAME': 'ejemplo',
+    'USER': 'renato',
+    'PASSWORD':'L12345on5',
+    'HOST': 'localhost',
+    'PORT': '3306'
+    }
+}'''
+=======
+}
+>>>>>>> 70f741bcabd82be37e8a73db01994424bbbe7341

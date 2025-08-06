@@ -1,0 +1,65 @@
+{% extends "inicio/encabezado.html" %}
+
+{% block titulo%} contacto {%endblock%}
+
+{%block imagen%}
+    {%load static%}
+    {%static 'inicio/images/contacto.png'%}
+{% endblock%}
+{%block descripcion%}
+	Contacto <span>DSM</span>
+{% endblock%}
+
+{% block contenido%}
+<div class="page-header">
+	<div class="page-title">
+        <h3>Contacto
+		<small>Ingresa tus datos</small></h3>
+    </div>
+</div>
+{% block encabezdo%}
+<div class="breadcrumb-line">
+	<ul class="breadcrumb">
+		<a href="{%url 'Principal'%}">
+			{%if request.path == '/' %}
+<<<<<<< HEAD
+				Principal
+			{%else%}
+				Principal{{request.path}}
+=======
+				Carga de
+			{%else%}
+				archivo{{request.path}}
+>>>>>>> 70f741bcabd82be37e8a73db01994424bbbe7341
+			{%endif%}
+        </a>
+	</ul>
+</div>
+{% endblock%}
+    
+<<<<<<< HEAD
+    <form class="form-horizontal" action="#" role="form">
+=======
+    <form class="form-horizontal" action="{% url 'Subir' %}" role="form" method="POST" enctype="multipart/form-data">
+>>>>>>> 70f741bcabd82be37e8a73db01994424bbbe7341
+        <div class="panel panel-default">
+	        <div class="panel-body">
+                <div class="form-group">
+                    <label class="col-sm-2 control-label text-right">Titulo:</label>
+                    <div class="col-sm-10">
+                        <input name="titulo" class="form-control" type="text"/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label text-right">Archivo:</label>
+                    <div class="col-sm-10">
+                        <textarea type="file" name="archivo"/>
+                    </div>
+                </div>
+                <div class="form-actions text-right">
+                    <input type="Button" name="enviar" value="Enviar" class="btn btn-primary"/>
+                </div>
+            </div>
+        </div>
+    </form>
+{%endblock%}

@@ -2,7 +2,7 @@
 URL configuration for prueba project.
 
 The `urlpatterns` list routes URLs to views. For more information please see:
-    https://docs.djangoproject.com/en/5.2/topics/http/urls/
+    https://docs.djangoproject.com/en/5.0/topics/http/urls/
 Examples:
 Function views
     1. Add an import:  from my_app import views
@@ -20,8 +20,8 @@ from inicio import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',views.principal, name="Principal"),
+    path('', views.principal, name="Principal"),
     path('contacto/',views.contacto, name="Contacto"),
-    path('formulario/',views.formulario, name="Formulario"),
-    path('ejemplo/',views.ejemplo, name="Ejemplo"),
+    path('formulario/',views.formulario,name="Formulario"),
 ]
+
